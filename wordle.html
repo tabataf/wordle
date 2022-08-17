@@ -1,105 +1,108 @@
 <!DOCTYPE html>
-  <html lang="pt-br">
-    <head>
-     <meta charset="utf-8"> 
-      <title> WORDLE </title>
-      <link rel="stylesheet" href="area1.css">
-      <link rel="stylesheet" href="area2.css">
-      
-    </head>
-      <body>
-        <div class="area1">
-          <div class="linha1">
-           <div class="a1 botao" >W</div>
-            <div class="a2 botao">O</div>
-            <div class="a3 botao">R</div>
-            <div class="a4 botao">L</div>
-            <div class="a5 botao">D</div>
-          </div> 
+<html lang="pt-br">
 
-           <div class="linha2">
-            <div class="b1 botao">A</div> 
-             <div class="b2 botao">P</div>
-             <div class="b3 botao">P</div>
-             <div class="b4 botao">L</div>
-             <div class="b5 botao">E</div>
-            </div> 
+<head>
+  <meta charset="utf-8">
+  <title> WORDLE </title>
+  <link rel="stylesheet" href="area1.css">
+  <link rel="stylesheet" href="area2.css">
+  <h1 class="titulo"> Wordle </h1>
+  <hr>
+</head>
 
-           <div class="linha3">
-                <div class="c1 botao">F</div> 
-                 <div class="c2 botao">A</div>
-                 <div class="c3 botao">U</div>
-                 <div class="c4 botao">L</div>
-                 <div class="c5 botao">T</div>
-             </div> 
+<body onkeydown="teclar(event)">
+  <div class="area1">
+    <div class="linha1">
+      <div id="a1" class="a1 botao"></div>
+      <div id="a2" class="a2 botao"></div>
+      <div id="a3" class="a3 botao"></div>
+      <div id="a4" class="a4 botao"></div>
+      <div id="a5" class="a5 botao"></div>
+    </div>
 
-           <div class="linha4">
-                <div class="d1 botao" >   </div> 
-                <div class="d2 botao" >  </div>
-                <div class="d3 botao" >  </div>
-                <div class="d4 botao" >  </div>
-                <div class="d5 botao">   </div>
-            </div> 
+    <div class="linha2">
+      <div class="b1 botao"></div>
+      <div class="b2 botao"></div>
+      <div class="b3 botao"></div>
+      <div class="b4 botao"></div>
+      <div class="b5 botao"></div>
+    </div>
 
-            <div class="linha5">
-                <div class="e1 botao" >   </div> 
-                <div class="e2 botao" >  </div>
-                <div class="e3 botao" >  </div>
-                <div class="e4 botao" >  </div>
-                <div class="e5 botao">   </div>
-            </div> 
+    <div class="linha3">
+      <div class="c1 botao"></div>
+      <div class="c2 botao"></div>
+      <div class="c3 botao"></div>
+      <div class="c4 botao"></div>
+      <div class="c5 botao"></div>
+    </div>
 
-            <div class="linha6">
-              <div class="f1 botao" >   </div> 
-              <div class="f2 botao" >  </div>
-              <div class="f3 botao" >  </div>
-              <div class="f4 botao" >  </div>
-              <div class="f5 botao">   </div>
-          </div> 
-         </div>
+    <div class="linha4">
+      <div class="d1 botao"> </div>
+      <div class="d2 botao"> </div>
+      <div class="d3 botao"> </div>
+      <div class="d4 botao"> </div>
+      <div class="d5 botao"> </div>
+    </div>
 
-          <div> 
-          <div class="area2">
-              <div class="linha7 teclado">
-              <div class="g1 tecla" >Q</div> 
-              <div class="g2 tecla" >W</div>
-              <div class="g3 tecla" >E</div>
-              <div class="g4 tecla" >R</div>
-              <div class="g5 tecla">T</div>
-              <div class="g6 tecla" >Y</div> 
-              <div class="g7 tecla" >U</div>
-              <div class="g8 tecla" >I</div>
-              <div class="g9 tecla" >O</div>
-              <div class="g10 tecla">P</div>
-            </div> 
+    <div class="linha5">
+      <div class="e1 botao"> </div>
+      <div class="e2 botao"> </div>
+      <div class="e3 botao"> </div>
+      <div class="e4 botao"> </div>
+      <div class="e5 botao"> </div>
+    </div>
 
-            <div class="linha8 teclado">
-              <div class="h1 tecla" >A</div> 
-              <div class="h2 tecla" >S</div>
-              <div class="h3 tecla" >D</div>
-              <div class="h4 tecla" >F</div>
-              <div class="h5 tecla">G</div>
-              <div class="h6 tecla" >H</div> 
-              <div class="h7 tecla" >J</div>
-              <div class="h8 tecla" >K</div>
-              <div class="h9 tecla" >L</div>
-            </div> 
+    <div class="linha6">
+      <div class="f1 botao"> </div>
+      <div class="f2 botao"> </div>
+      <div class="f3 botao"> </div>
+      <div class="f4 botao"> </div>
+      <div class="f5 botao"> </div>
+    </div>
+  </div>
 
-            <div class="linha9 teclado">
-            <div class="i1 tecla" >ENTER</div> 
-            <div class="i2 tecla" >Z</div>
-            <div class="i3 tecla" >X</div>
-            <div class="i4 tecla" >C</div>
-            <div class="i5 tecla">V</div>
-            <div class="i6 tecla" >B</div> 
-            <div class="i7 tecla" >N</div>
-            <div class="i8 tecla" >M</div>
-            <div class="i9 tecla" >⌫</div>
-          </div> 
-  
+  <div class="cont div ">
+    <div class="area2">
+      <div class="linha7 teclado">
+        <button class="g1 tecla" onclick="inserindo(this)">Q</button>
+        <button class="g2 tecla" onclick="inserindo(this)">W</button>
+        <button class="g3 tecla" onclick="inserindo(this)">E</button>
+        <button class="g4 tecla" onclick="inserindo(this)">R</button>
+        <button class="g5 tecla" onclick="inserindo(this)">T</button>
+        <button class="g6 tecla" onclick="inserindo(this)">Y</button>
+        <button class="g7 tecla" onclick="inserindo(this)">U</button>
+        <button class="g8 tecla" onclick="inserindo(this)">I</button>
+        <button class="g9 tecla" onclick="inserindo(this)">O</button>
+        <button class="g10 tecla" onclick="inserindo(this)">P</button>
       </div>
 
-      </body>
+      <div class="linha8 teclado">
+        <button class="h1 tecla" onclick="inserindo(this)">A</button>
+        <button class="h2 tecla" onclick="inserindo(this)">S</button>
+        <button class="h3 tecla" onclick="inserindo(this)">D</button>
+        <button class="h4 tecla" onclick="inserindo(this)">F</button>
+        <button class="h5 tecla" onclick="inserindo(this)">G</button>
+        <button class="h6 tecla" onclick="inserindo(this)">H</button>
+        <button class="h7 tecla" onclick="inserindo(this)">J</button>
+        <button class="h8 tecla" onclick="inserindo(this)">K</button>
+        <button class="h9 tecla" onclick="inserindo(this)">L</button>
+      </div>
 
+      <div class="linha9 teclado">
+        <button class="i1 tecla" onclick="inserindo(this)">ENTER</button>
+        <button class="i2 tecla" onclick="inserindo(this)">Z</button>
+        <button class="i3 tecla" onclick="inserindo(this)">X</button>
+        <button class="i4 tecla" onclick="inserindo(this)">C</button>
+        <button class="i5 tecla" onclick="inserindo(this)">V</button>
+        <button class="i6 tecla" onclick="inserindo(this)">B</button>
+        <button class="i7 tecla" onclick="inserindo(this)">N</button>
+        <button class="i8 tecla" onclick="inserindo(this)">M</button>
+        <button class="i9 tecla" onclick="inserindo(this)">⌫</button>
+      </div>
 
-  </html>
+    </div>
+
+</body>
+<script src="./wordle.js"></script>
+
+</html>
