@@ -32,10 +32,7 @@ function teclar(letra){
             else{
                 alert ("burrão!")
                 i++
-            }
-
-
-            
+            }           
         } 
     } 
 
@@ -45,7 +42,7 @@ function teclar(letra){
         i++
         console.log(lista)
         }
+    }
     console.log(i)
     
 
-}
